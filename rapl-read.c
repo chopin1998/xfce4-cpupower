@@ -183,6 +183,8 @@ static int rapl_sysfs(int core) {
 		}
 	}
 
+    printf("<txt>CPU: %.1fw </txt><tool>", ((double)after[0][0]-(double)before[0][0])/1000000.0);
+    
 	for(j=0;j<total_packages;j++) {
 		//printf("\tPackage %d\n",j);
 		for(i=0;i<NUM_RAPL_DOMAINS;i++) {
@@ -202,8 +204,6 @@ int main(int argc, char **argv) {
 
 	int core=0;
 	int result=-1;
-
-	printf("<txt>CPU Power</txt><tool>");
 
 	detect_packages();
 
