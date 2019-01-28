@@ -183,7 +183,7 @@ static int rapl_sysfs(int core) {
 		}
 	}
 
-    printf("<txt>CPU: %.1fw </txt><tool>", ((double)after[0][0]-(double)before[0][0])/1000000.0);
+    printf("<txt>%.1fw </txt><tool>", ((double)after[0][0]-(double)before[0][0])/1000000.0);
     
 	for(j=0;j<total_packages;j++) {
 		//printf("\tPackage %d\n",j);
